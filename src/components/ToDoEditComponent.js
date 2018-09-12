@@ -72,7 +72,8 @@ class ToDoEditComponent extends Component {
   };
 
   handleBack = e => {
-    this.props.getSingleList(this.props.match.params.id.toString());
+    const {originalVales} = this.state;
+    this.setState({todoItem: originalVales});
   };
 
   handleBackToList = e => {
